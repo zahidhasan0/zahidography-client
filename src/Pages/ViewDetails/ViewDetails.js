@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthProvider } from "../../Context/AuthContext";
+import ReviewDetails from "./ReviewDetails";
 
 const ViewDetails = () => {
   const [reviews, setReviews] = useState([]);
+  const [reviewsByService, setReviewByService] = useState([]);
 
   const serviceDetails = useLoaderData();
 
@@ -47,17 +49,9 @@ const ViewDetails = () => {
   };
 
   useEffect(() => {
-    // console.log(JSON.stringify(reviews));
-    fetch(`http://localhost:5000/reviewsByIds`, {
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(reviews),
-    })
+    fetch(`http://localhost:5000/reviewsByID/${_id}`)
       .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-      });
+      .then((data) => setReviewByService(data));
   }, []);
 
   return (
@@ -91,7 +85,12 @@ const ViewDetails = () => {
           </h5>
 
           <div>
-            <h5>reviews</h5>
+            {reviewsByService.map((singleReview) => (
+              <ReviewDetails
+                key={singleReview._id}
+                singleReview={singleReview}
+              ></ReviewDetails>
+            ))}
           </div>
         </div>
 

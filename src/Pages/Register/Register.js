@@ -3,8 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthProvider } from "../../Context/AuthContext";
 
 const Register = () => {
-  const [password, setCorrectPassword] = useState("");
-  const { handleRegister, googleSignIn } = useContext(AuthProvider);
+  const [password, setCorrectPasswor] = useState("");
+  const { handleRegister, googleSignIn, updateUserProfile } =
+    useContext(AuthProvider);
   //   console.log(user?.email);
   const navigate = useNavigate();
 
@@ -14,6 +15,7 @@ const Register = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+    const name = form.name.value;
 
     console.log(email, password, password);
     handleRegister(email, password)
@@ -21,6 +23,9 @@ const Register = () => {
         const user = result.user;
         console.log(user);
         navigate("/");
+        updateUserProfile({
+          displayName: name,
+        });
       })
       .catch((error) => console.error(error));
   };
@@ -34,6 +39,7 @@ const Register = () => {
       })
       .catch((error) => console.error(error));
   };
+
   return (
     <div className="w-1/2 my-12 border-2 p-4 mx-auto ">
       <form onSubmit={register}>
@@ -75,10 +81,11 @@ const Register = () => {
           <div className="relative z-0 mb-6 w-full group">
             <input
               type="text"
-              name="floating_first_name"
+              name="name"
               id="floating_first_name"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
+              required
             />
             <label
               htmlFor="floating_first_name"
