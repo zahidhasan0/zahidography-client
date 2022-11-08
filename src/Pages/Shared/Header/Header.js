@@ -1,18 +1,40 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthProvider } from "../../../Context/AuthContext";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthProvider);
+  const handleSignOut = () => {
+    logOut()
+      .then((result) => {})
+      .catch((error) => console.error(error));
+  };
   const menu = (
     <>
-      <li>
+      <li className="font-semibold">
         <Link to="/">Home</Link>
       </li>
 
-      <li>
-        <Link to="/login">Login</Link>
-      </li>
+      {user?.email ? (
+        <>
+          <li className="font-semibold">
+            <Link to="/myreviews">My Reviews</Link>
+          </li>
+          <li className="font-semibold">
+            <Link to="/addservice">Add Service</Link>
+          </li>
+          <li onClick={handleSignOut} className="font-semibold">
+            <Link>Sign Out</Link>
+          </li>
+        </>
+      ) : (
+        <li className="font-semibold">
+          <Link to="/login">Login</Link>
+        </li>
+      )}
     </>
   );
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -35,7 +57,7 @@ const Header = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 "
           >
             {menu}
           </ul>
