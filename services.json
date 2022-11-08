@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Portrait Photography",
+        "category_Id": "1",
+        "img": "https://images.unsplash.com/photo-1603775020644-eb8decd79994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXQlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHw%3D&w=1000&q=80",
+        "ratings": "4.9",
+        "price": "180",
+        "description": "Portrait photography is one of the most popular genres of photography, with good reason. Good portrait photographers are able to capture the personality and emotion of people around them, along with earning money via wedding photography, senior portraits, family photography sessions, and so on. Below, you’ll find everything we’ve written about portrait photography, intended for both beginners and professionals. Also, if you want some ideas beyond our basic portrait photography tips, take a look at our more specialized tutorials on weddings and flash photography. Those articles will help you with posing, camera settings, and lighting portraits. It isn’t always easy to take pictures of people, but it’s worth the effort to learn."
+    },
+    {
+        "name": "Wedding Photography",
+        "category_Id": "2",
+        "img": "https://i.pinimg.com/originals/14/26/70/14267001791dd3eb1bcc342b0541389e.jpg",
+        "ratings": "5",
+        "price": "200",
+        "description": "Looking for a wedding photographer? We approach weddings in a documentary and artistic way, trying to tell the story of your day honestly and unobtrusively. Our images are warm, romantic, and intimate. We hope to give you images that make you feel, not just see."
+    },
+    {
+        "name": "Food Photography",
+        "category_Id": "3",
+        "img": "https://www.ppa.com/assets/images/ppmag_articles/2019320160929_ftinc_286_2.jpg",
+        "ratings": "5",
+        "price": "180",
+        "description": "Food photography is an art and it can be used to breathe new life or give a whole new dimension to the food we eat. It can also be used commercially for advertising, marketing and more. Professional food photography is not just something for Instagram, it is a serious commercial venture. Restaurants make use of food photography for their menus and advertisements. You can also see food photography being used for food packaging etc. It can, in fact, be a very lucrative profession."
+    },
+    {
+        "name": "Product Photography",
+        "category_Id": "4",
+        "img": "https://www.idea2makemoney.com/wp-content/uploads/2021/10/3-4.jpg",
+        "ratings": "5",
+        "price": "190",
+        "description": "Product photography isn’t one size fits all. Just as your ecommerce store likely features a variety of products and services, product photos also come in a variety of styles and purposes. Some are for everyday use, while others are more unique and only used in special cases. Whether you want to maintain a consistent look across your product photos or tastefully mix and match them, it’s important to understand the difference between each type of product photography and how to best capture them. "
+    },
+    {
+        "name": "Photo Editing",
+        "category_Id": "5",
+        "img": "https://www.ribbet.com/content/assets/images/01-IMAGE-FULL.jpg",
+        "ratings": "5",
+        "price": "100",
+        "description": "Photo editing is the act of altering an image. But that’s oversimplifying a subject that can be complex and employs different methods and tools. Editing helps you get the best image possible, as close to what you imagined when you took the photo (or better perhaps). Niche photographers can hone and emphasize their personal style. And for businesses, editing helps cement branding."
+    },
+    {
+        "name": "Set Design",
+        "category_Id": "6",
+        "img": "https://images.squarespace-cdn.com/content/v1/528f8b33e4b01f2a315145b2/1537437488184-4GW0BJE5403ZFO3CN9KQ/0103.jpg",
+        "ratings": "4.9",
+        "price": "150",
+        "description": "et design doesn’t have to be expensive, either. The main set you see here was created entirely from cardboard and chalk. First, we collected and tore apart boxes, before painting them black and taping them together. We then smeared chalk around the edges to contrast with the black and rough it up a little. The final touch was to add bolder lines with a chalk pen. The finished product – including Rexha’s expression – reflects how busy the mind can get with paranoid thoughts."
+    }
+]
