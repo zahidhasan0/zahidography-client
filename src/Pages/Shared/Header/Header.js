@@ -1,12 +1,15 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthProvider } from "../../../Context/AuthContext";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthProvider);
+  const navigate = useNavigate();
   const handleSignOut = () => {
     logOut()
-      .then((result) => {})
+      .then((result) => {
+        navigate("/");
+      })
       .catch((error) => console.error(error));
   };
   const menu = (
