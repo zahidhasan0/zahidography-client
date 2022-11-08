@@ -18,7 +18,7 @@ const Services = () => {
         ))}
       </div>
       <div className="text-center">
-        <Link to="/allservices">
+        <Link to="/services">
           {" "}
           <button className="btn btn-dark px-6 my-4">See All</button>
         </Link>
