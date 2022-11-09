@@ -1,9 +1,14 @@
 import React from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
+import { Helmet } from "react-helmet";
 
 const Blogs = () => {
   return (
     <div className="my-8 mx-5 md:mx-14">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Blogs : ZahidograhY </title>
+      </Helmet>
       <h3 className="text-2xl md:text-4xl font-bold text-stone-800">
         Let's explore some important concepts!!
       </h3>

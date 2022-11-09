@@ -3,6 +3,7 @@ import { AuthProvider } from "../../Context/AuthContext";
 import ReviewCard from "./ReviewCard/ReviewCard";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet";
 
 const MyReview = () => {
   const [userReviews, setUserReviews] = useState([]);
@@ -38,6 +39,10 @@ const MyReview = () => {
   };
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>My Review : ZahidograhY </title>
+      </Helmet>
       <h2 className="text-center font-bold text-3xl mb-6 mt-12">
         Your Reviews
       </h2>

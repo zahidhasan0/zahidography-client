@@ -1,9 +1,12 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const UpdatedPage = () => {
   const updatableReview = useLoaderData();
   console.log(updatableReview);
+
+  const navigate = useNavigate();
 
   const handleUpdate = (event) => {
     event.preventDefault();
@@ -19,13 +22,17 @@ const UpdatedPage = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        
+        navigate("/myreview");
         console.log(data);
       });
   };
 
   return (
     <div className="my-12">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Update Review : ZahidograhY </title>
+      </Helmet>
       <h3 className="text-3xl font-semibold text-center my-12">
         Update your review
       </h3>

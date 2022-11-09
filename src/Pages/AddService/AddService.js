@@ -1,5 +1,6 @@
 import React from "react";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const AddService = () => {
   const handleAddService = (event) => {
@@ -44,6 +45,10 @@ const AddService = () => {
 
   return (
     <div className="w-1/2 mx-auto my-12">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Add Service : ZahidograhY </title>
+      </Helmet>
       <h3 className="text-3xl font-bold text-center mb-5">Add Service</h3>
       <form onSubmit={handleAddService} className=" p-6 my-12">
         <div className="mb-6">

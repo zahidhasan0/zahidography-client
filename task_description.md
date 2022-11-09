@@ -49,9 +49,10 @@ However, your website **cannot** be related to your **previous assignments** or 
 2. At least 15 meaningful GitHub commits for the client-side and 8 meaningful commits for the server-side repository.
 3. Your code should be clean and organized. Comments should be added where necessary
 
-4. The **title of the page** will change with the page you visit. It should not be the same for every route
-5. Add a meaningful favicon
+<!-- 4. The **title of the page** will change with the page you visit. It should not be the same for every route -->
+<!-- 5. Add a meaningful favicon -->
 <!-- 6. Add a **spinner** on the services page, and the login and register page. If data is loading, a spinner will be displayed. -->
+
 6. use the **Environment** Environment variable on both the client (firebase config) and server-side (mongodb credentials, Access token secret). Use .gitignore file on the server side.
 7. Implement the basic version of the **JWT** **token** for email/password-based authentication. Upon login, you will create a jwt token and store it on the client side, and for the "My reviews" page, you will send the token and verify the user. Implementing 401 and 403 is optional.
 <!-- 9. In the "My reviews" page, clicking the **edit review** button/icon shows that review in a modal/in a new route and lets the user update it. -->
@@ -65,8 +66,8 @@ However, your website **cannot** be related to your **previous assignments** or 
 4. On the `add a service` page, try to implement direct image upload from your computer. This image can be hosted on a third party image hosting like imgbb or directly to mongodb
 5. Add some animation while applicable.
 6. Please Use icons whenever applicable and use fonts (google fonts)
-7. Make the footer a little more realistic with the copyright symbol and year.
-8. Optimize your images
+<!-- 7. Make the footer a little more realistic with the copyright symbol and year. -->
+<!-- 8. Optimize your images -->
 9. Add something extra of your own. This will help you in the future.
 
 ### Additional information:

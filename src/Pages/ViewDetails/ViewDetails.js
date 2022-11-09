@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthProvider } from "../../Context/AuthContext";
 import ReviewDetails from "./ReviewDetails/ReviewDetails";
+import { Helmet } from "react-helmet";
 
 const ViewDetails = () => {
   const [reviews, setReviews] = useState([]);
@@ -59,6 +60,10 @@ const ViewDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>View Details : ZahidograhY </title>
+      </Helmet>
       <section>
         <div>
           <div className="card w-4/5 mx-auto md:card-side bg-base-100 shadow-xl ">

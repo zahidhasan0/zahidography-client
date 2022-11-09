@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthProvider } from "../../Context/AuthContext";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { handleSignIn, googleSignIn } = useContext(AuthProvider);
@@ -35,6 +36,10 @@ const Login = () => {
 
   return (
     <div className="p-4 w-full max-w-sm mx-auto my-12 bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Login : ZahidograhY </title>
+      </Helmet>
       <form onSubmit={logIn} className="space-y-6">
         <h5 className="text-xl font-medium text-gray-900 dark:text-white">
           Log In

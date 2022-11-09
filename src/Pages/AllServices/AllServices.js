@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ServiceCard from "../Home/Services/ServiceCard/ServiceCard";
+import { Helmet } from "react-helmet";
 
 const AllServices = () => {
   const [allServices, setAllServices] = useState([]);
@@ -14,6 +15,10 @@ const AllServices = () => {
   }, []);
   return (
     <div className="my-5 container mx-auto">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>All Services : ZahidograhY </title>
+      </Helmet>
       <h2 className="text-4xl font-bold mb-5"> All Services</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {allServices.map((service) => (

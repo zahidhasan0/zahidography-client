@@ -1,9 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthProvider } from "../../Context/AuthContext";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
-  const [password, setCorrectPasswor] = useState("");
   const { handleRegister, googleSignIn, updateUserProfile } =
     useContext(AuthProvider);
   //   console.log(user?.email);
@@ -44,6 +44,10 @@ const Register = () => {
 
   return (
     <div className="w-1/2 my-12 border-2 p-4 mx-auto ">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>All Services : ZahidograhY </title>
+      </Helmet>
       <form onSubmit={register}>
         <h3 className="text-2xl font-semibold pb-5">Register</h3>
         <div className="relative z-0 mb-6 w-full group">
