@@ -46,6 +46,8 @@ const ViewDetails = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if (data.acknowledged) {
+        }
       });
   };
 
@@ -53,7 +55,7 @@ const ViewDetails = () => {
     fetch(`http://localhost:5000/reviewsByID/${_id}`)
       .then((res) => res.json())
       .then((data) => setReviewByService(data));
-  }, []);
+  }, [_id]);
 
   return (
     <div>
