@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthProvider } from "../../Context/AuthContext";
 
 const Register = () => {
@@ -8,6 +8,8 @@ const Register = () => {
     useContext(AuthProvider);
   //   console.log(user?.email);
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const register = (event) => {
     event.preventDefault();
@@ -22,7 +24,7 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        navigate("/");
+        navigate(from, { replace: true });
         updateUserProfile({
           displayName: name,
         });
@@ -35,7 +37,7 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        navigate("/");
+        navigate(from, { replace: true });
       })
       .catch((error) => console.error(error));
   };
