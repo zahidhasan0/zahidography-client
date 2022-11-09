@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthProvider } from "../../Context/AuthContext";
-import ReviewDetails from "./ReviewDetails";
+import ReviewDetails from "./ReviewDetails/ReviewDetails";
 
 const ViewDetails = () => {
   const [reviews, setReviews] = useState([]);
@@ -34,6 +34,7 @@ const ViewDetails = () => {
       userUid: user.uid,
       userImg: user.photoURL,
       revirewText: text,
+      serviceImg: img,
     };
     fetch(`http://localhost:5000/reviews`, {
       method: "POST",
@@ -58,7 +59,7 @@ const ViewDetails = () => {
     <div>
       <section>
         <div>
-          <div className="card w-4/5 mx-auto card-side bg-base-100 shadow-xl">
+          <div className="card w-4/5 mx-auto md:card-side bg-base-100 shadow-xl ">
             <figure>
               <img src={img} alt="Movie" />
             </figure>
@@ -78,10 +79,10 @@ const ViewDetails = () => {
         </div>
       </section>
 
-      <section className="my-12">
-        <div>
-          <h5 className="text-4xl font-semibold">
-            Show reviews about this service
+      <section className="my-24">
+        <div className="my-12">
+          <h5 className="text-4xl text-center my-5 font-semibold">
+            Reviews of this service
           </h5>
 
           <div>
@@ -94,32 +95,42 @@ const ViewDetails = () => {
           </div>
         </div>
 
-        <div>
-          <form
-            onSubmit={handleReviewBox}
-            className="py-10 shadow-md w-4/5 mx-auto "
-          >
-            <label
-              htmlFor="message"
-              className="block mb-2  font-medium text-gray-900 dark:text-gray-400 text-center text-xl"
+        {user?.email ? (
+          <div>
+            <form
+              onSubmit={handleReviewBox}
+              className="py-10 shadow-md w-4/5 mx-auto "
             >
-              Drop Your Review
-            </label>
-            <textarea
-              id="message"
-              rows="4"
-              name="text"
-              className="block  w-4/5 mx-auto  text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
-              placeholder="Drop your valuable review here"
-            ></textarea>
+              <label
+                htmlFor="message"
+                className="block mb-2  font-medium text-gray-900 dark:text-gray-400 text-center text-xl"
+              >
+                Drop Your Review
+              </label>
+              <textarea
+                id="message"
+                rows="4"
+                name="text"
+                className="block  w-4/5 mx-auto  text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
+                placeholder="Drop your valuable review here"
+              ></textarea>
 
-            <div className="text-center mr-5 mt-5">
-              <button className="btn btn-dark rounded-lg" type="submit">
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
+              <div className="text-center mr-5 mt-5">
+                <button className="btn btn-dark rounded-lg" type="submit">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        ) : (
+          <h4 className="text-xl font-bold text-dark text-center ">
+            {" "}
+            <Link className="text-white bg-slate-900" to="/login">
+              Login
+            </Link>{" "}
+            for write your review.
+          </h4>
+        )}
       </section>
     </div>
   );

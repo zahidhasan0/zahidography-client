@@ -19,14 +19,14 @@ However, your website **cannot** be related to your **previous assignments** or 
 <!-- 2. There will be a " **see all**" button/icon under the 3 services. When clicking the button/icon, take the user to the _/services_ route and show all the services on that page. -->
 
 3. Add two extra sections on the home page. Make sure it is unique and relevant to your website.
-      <!-- 4. The services of the home page and the services of the services page will have the name of the service, image, rating(optional), price, a short description(maximum 100 characters), and a view details button with each service card. -->
-      <!-- 5. When clicking on the image of the service, the picture will be viewed on full screen. Explore the package [react-photo-view](https://react-photo-view.vercel.app/en-US) for that.
-   <!-- 4. On clicking the view details button, the user will be taken to the service details page: _/services/:id_ route  -->
-4. The service details route will have two sections.
+   <!-- 4. The services of the home page and the services of the services page will have the name of the service, image, rating(optional), price, a short description(maximum 100 characters), and a view details button with each service card. -->
+   <!-- 5. When clicking on the image of the service, the picture will be viewed on full screen. Explore the package [react-photo-view](https://react-photo-view.vercel.app/en-US) for that.
+      <!-- 4. On clicking the view details button, the user will be taken to the service details page: _/services/:id_ route  -->
+   <!-- 4. The service details route will have two sections. -->
 
-   <!-- 7.1. **Service section:-** show all the details of that Service with full description. -->
+      <!-- 7.1. **Service section:-** show all the details of that Service with full description. -->
 
-   7.2. **Review section:-** there will be a review section where a user can see others' reviews of that service. A review should contain a text, name, and image of the reviewer, rating(optional). The user can also **add his/her own review** for that service. But he needs to log in first. If the user is not logged in(use conditional rendering), show a text like: Please login to add a review. After clicking the login button/link, take him to the login page. Otherwise, show a form with a text area and a button to add his review(rating is optional). Please store the user info (email, etc.) and service info (service id, etc.) with each review to display the reviews correctly with the relevant service.
+      <!-- 7.2. **Review section:-** there will be a review section where a user can see others' reviews of that service. A review should contain a text, name, and image of the reviewer, rating(optional). The user can also **add his/her own review** for that service. But he needs to log in first. If the user is not logged in(use conditional rendering), show a text like: Please login to add a review. After clicking the login button/link, take him to the login page. Otherwise, show a form with a text area and a button to add his review(rating is optional). Please store the user info (email, etc.) and service info (service id, etc.) with each review to display the reviews correctly with the relevant service. -->
 
 <!-- 6. Implement email/password-based authentication and at least one social login(google, Facebook, GitHub, etc.) authentication. Please skip the email verification part here, because it will create some inconvenience for the examiner. It is important for the examiner to be able to check your authentication without any hassle. If you want, you can add email verification after getting the assignment result. -->
 
