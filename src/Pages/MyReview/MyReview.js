@@ -11,7 +11,11 @@ const MyReview = () => {
   //   console.log(user?.uid);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviewsByUID/${user?.uid}`)
+    fetch(`http://localhost:5000/reviewsByUID/${user?.uid}`, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setUserReviews(data));
   }, [user?.uid]);
