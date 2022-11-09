@@ -8,6 +8,8 @@ import Register from "../Pages/Register/Register";
 import UpdatedPage from "../Pages/UpdatedPage/UpdatedPage";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import PrivateRoute from "./PrivateRoute";
+import AddService from "../Pages/AddService/AddService.js";
+import Blogs from "../Pages/Blogs/Blogs";
 
 export const router = createBrowserRouter([
   {
@@ -45,11 +47,24 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+
       {
         path: "/updatePage/:id",
         element: <UpdatedPage />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/reviews/${params.id}`),
+      },
+      {
+        path: "/addservice",
+        element: (
+          <PrivateRoute>
+            <AddService />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />,
       },
     ],
   },

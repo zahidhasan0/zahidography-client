@@ -6,6 +6,10 @@ const Header = () => {
   const { user, logOut } = useContext(AuthProvider);
   const navigate = useNavigate();
   const handleSignOut = () => {
+    const agree = window.confirm("Are you want to log out?");
+    if (!agree) {
+      return;
+    }
     logOut()
       .then((result) => {
         navigate("/");
@@ -16,6 +20,9 @@ const Header = () => {
     <>
       <li className="font-semibold">
         <Link to="/">Home</Link>
+      </li>
+      <li className="font-semibold">
+        <Link to="/blogs">Blogs</Link>
       </li>
 
       {user?.email ? (
@@ -31,9 +38,11 @@ const Header = () => {
           </li>
         </>
       ) : (
-        <li className="font-semibold">
-          <Link to="/login">Login</Link>
-        </li>
+        <>
+          <li className="font-semibold">
+            <Link to="/login">Login</Link>
+          </li>
+        </>
       )}
     </>
   );

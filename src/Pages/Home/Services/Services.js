@@ -7,11 +7,16 @@ const Services = () => {
   useEffect(() => {
     fetch("http://localhost:5000/home-services")
       .then((res) => res.json())
-      .then((data) => setServices(data));
+      .then((data) => {
+        setServices(data);
+      });
   }, []);
 
   return (
     <div className="my-24">
+      <h3 className="text-2xl w-1/5 mx-auto my-8 border-b-8 pb-5 text-center font-bold">
+        Services
+      </h3>
       <div className="grid md:grid-cols-3 gap-5 ">
         {services.map((service) => (
           <ServiceCard key={service._id} service={service}></ServiceCard>
