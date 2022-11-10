@@ -3,11 +3,12 @@ import PhotoDetails from "./PhotoDetails/PhotoDetails";
 
 const PhotoSamples = () => {
   const [photos, setPhotos] = useState([]);
+
+  //loading images from the database
   useEffect(() => {
     fetch("http://localhost:5000/photos")
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
         setPhotos(data);
       });
   }, []);

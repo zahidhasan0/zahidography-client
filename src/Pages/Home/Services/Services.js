@@ -4,6 +4,9 @@ import ServiceCard from "./ServiceCard/ServiceCard";
 
 const Services = () => {
   const [services, setServices] = useState([]);
+
+
+  //loading services from database
   useEffect(() => {
     fetch("http://localhost:5000/home-services")
       .then((res) => res.json())

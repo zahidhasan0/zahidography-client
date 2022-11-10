@@ -10,6 +10,8 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
+  // login using email and password
+
   const logIn = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -39,6 +41,8 @@ const Login = () => {
       })
       .catch((error) => console.error(error));
   };
+
+  // social login
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((result) => {

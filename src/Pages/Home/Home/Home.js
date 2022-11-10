@@ -11,6 +11,7 @@ const Home = () => {
         <meta charSet="utf-8" />
         <title>Home : ZahidograhY </title>
       </Helmet>
+
       <Banner />
       <Services />
       <PhotoSamples />

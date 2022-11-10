@@ -15,6 +15,7 @@ const AllServices = () => {
   }, []);
   return (
     <div className="my-5 container mx-auto">
+      {/* helmet for route title  */}
       <Helmet>
         <meta charSet="utf-8" />
         <title>All Services : ZahidograhY </title>
@@ -26,6 +27,7 @@ const AllServices = () => {
         ))}
       </div>
 
+      {/* adding spinner before data load  */}
       {spinning && (
         <div class="text-center">
           <div role="status">

@@ -8,6 +8,7 @@ const UpdatedPage = () => {
 
   const navigate = useNavigate();
 
+  // update function
   const handleUpdate = (event) => {
     event.preventDefault();
     const text = event.target.text.value;
@@ -29,6 +30,7 @@ const UpdatedPage = () => {
 
   return (
     <div className="my-12">
+      {/* helmet for route title  */}
       <Helmet>
         <meta charSet="utf-8" />
         <title>Update Review : ZahidograhY </title>
@@ -36,6 +38,8 @@ const UpdatedPage = () => {
       <h3 className="text-3xl font-semibold text-center my-12">
         Update your review
       </h3>
+
+      {/* update form  */}
       <form onSubmit={handleUpdate} className=" shadow-lg p-5">
         <textarea
           id="message"

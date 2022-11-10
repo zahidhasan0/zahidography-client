@@ -11,6 +11,7 @@ const Register = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
+  // resigter function
   const register = (event) => {
     event.preventDefault();
 
@@ -32,6 +33,7 @@ const Register = () => {
       .catch((error) => console.error(error));
   };
 
+  // social login
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((result) => {

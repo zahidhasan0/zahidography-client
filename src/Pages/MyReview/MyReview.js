@@ -7,19 +7,27 @@ import { Helmet } from "react-helmet";
 
 const MyReview = () => {
   const [userReviews, setUserReviews] = useState([]);
-  const { user } = useContext(AuthProvider);
-  //   console.log(user?.uid);
+  const { user, logOut } = useContext(AuthProvider);
+
+  //load reviews by uid.
 
   useEffect(() => {
     fetch(`http://localhost:5000/reviewsByUID/${user?.uid}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("token")}`,
+        email: `${user?.email}`,
       },
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status === 401 || res.status === 403) {
+          return logOut();
+        }
+        res.json();
+      })
       .then((data) => setUserReviews(data));
-  }, [user?.uid]);
+  }, [user?.uid, user?.email, logOut]);
 
+  // review delete function
   const handleDelete = (id) => {
     const agree = window.confirm("Aye you sure to delete this review?");
     if (!agree) {
@@ -43,10 +51,12 @@ const MyReview = () => {
   };
   return (
     <div>
+      {/* helmet for route title  */}
       <Helmet>
         <meta charSet="utf-8" />
         <title>My Review : ZahidograhY </title>
       </Helmet>
+
       <h2 className="text-center font-bold text-3xl mb-6 mt-12">
         Your Reviews
       </h2>
@@ -68,13 +78,6 @@ const MyReview = () => {
             ))}
           </>
         )}
-        {/* {userReviews.map((singleReview) => (
-          <ReviewCard
-            key={singleReview._id}
-            singleReview={singleReview}
-            handleDelete={handleDelete}
-          ></ReviewCard>
-        ))} */}
       </div>
       <ToastContainer />
     </div>

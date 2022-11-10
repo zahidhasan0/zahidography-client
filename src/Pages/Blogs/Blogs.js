@@ -66,11 +66,6 @@ const Blogs = () => {
                 />
               </PhotoView>
             </PhotoProvider>
-            {/* <img
-              className="text-center  "
-              src="https://supertokens.com/static/b0172cabbcd583dd4ed222bdb83fc51a/9af93/jwt-structure.png"
-              alt=""
-            /> */}
           </div>
 
           <p className="text-xl text-gray-700">

@@ -8,6 +8,7 @@ const ServiceCard = ({ service }) => {
 
   return (
     <div>
+      {/* photo provider for full photo view  */}
       <PhotoProvider>
         <div className="card w-96 bg-base-100 shadow-xl">
           <figure>
