@@ -1,8 +1,10 @@
 import React from "react";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 const AddService = () => {
+  const navigate = useNavigate();
   const handleAddService = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -43,6 +45,8 @@ const AddService = () => {
             showConfirmButton: false,
             timer: 1500,
           });
+
+          navigate("/services");
         }
       });
   };
