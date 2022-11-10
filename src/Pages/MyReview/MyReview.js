@@ -12,7 +12,7 @@ const MyReview = () => {
   //load reviews by uid.
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviewsByUID/${user?.uid}`, {
+    fetch(`http://localhost:5000/reviewsByUID/${user.uid}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("token")}`,
         email: `${user?.email}`,
@@ -24,7 +24,10 @@ const MyReview = () => {
         }
         res.json();
       })
-      .then((data) => setUserReviews(data));
+      .then((data) => {
+        console.log(data);
+        setUserReviews(data);
+      });
   }, [user?.uid, user?.email, logOut]);
 
   // review delete function
@@ -61,7 +64,7 @@ const MyReview = () => {
         Your Reviews
       </h2>
       <div>
-        {userReviews.length === 0 ? (
+        {userReviews?.length === 0 ? (
           <div className="w-3/5 mx-auto h-80 my-auto flex justify-center items-center">
             <h3 className="text-3xl  text-center text-yellow-500 font-bold">
               No reviews were added
@@ -69,7 +72,7 @@ const MyReview = () => {
           </div>
         ) : (
           <>
-            {userReviews.map((singleReview) => (
+            {userReviews?.map((singleReview) => (
               <ReviewCard
                 key={singleReview._id}
                 singleReview={singleReview}

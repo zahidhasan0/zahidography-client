@@ -54,9 +54,9 @@ However, your website **cannot** be related to your **previous assignments** or 
 <!-- 6. Add a **spinner** on the services page, and the login and register page. If data is loading, a spinner will be displayed. -->
 
 6. use the **Environment** Environment variable on both the client (firebase config) and server-side (mongodb credentials, Access token secret). Use .gitignore file on the server side.
-<!-- 7. Implement the basic version of the **JWT** **token** for email/password-based authentication. Upon login, you will create a jwt token and store it on the client side, and for the "My reviews" page, you will send the token and verify the user. Implementing 401 and 403 is optional. -->
-<!-- 9. In the "My reviews" page, clicking the **edit review** button/icon shows that review in a modal/in a new route and lets the user update it. -->
-8. **Simple challenge** In the service details page, **sort the reviews in a descending order** by inserting time(you have to keep the inserting time when you add a review, you can do it with the Date object, or you can explore MongoDB documentation). You will have to implement this code on the server side.
+   <!-- 7. Implement the basic version of the **JWT** **token** for email/password-based authentication. Upon login, you will create a jwt token and store it on the client side, and for the "My reviews" page, you will send the token and verify the user. Implementing 401 and 403 is optional. -->
+   <!-- 9. In the "My reviews" page, clicking the **edit review** button/icon shows that review in a modal/in a new route and lets the user update it. -->
+7. **Simple challenge** In the service details page, **sort the reviews in a descending order** by inserting time(you have to keep the inserting time when you add a review, you can do it with the Date object, or you can explore MongoDB documentation). You will have to implement this code on the server side.
 
 ### Optional
 
@@ -66,9 +66,9 @@ However, your website **cannot** be related to your **previous assignments** or 
 4. On the `add a service` page, try to implement direct image upload from your computer. This image can be hosted on a third party image hosting like imgbb or directly to mongodb
 5. Add some animation while applicable.
 6. Please Use icons whenever applicable and use fonts (google fonts)
-<!-- 7. Make the footer a little more realistic with the copyright symbol and year. -->
-<!-- 8. Optimize your images -->
-9. Add something extra of your own. This will help you in the future.
+   <!-- 7. Make the footer a little more realistic with the copyright symbol and year. -->
+   <!-- 8. Optimize your images -->
+7. Add something extra of your own. This will help you in the future.
 
 ### Additional information:
 
