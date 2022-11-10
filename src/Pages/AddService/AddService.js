@@ -1,6 +1,7 @@
 import React from "react";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
+import Check from "../checking/Check.js";
 
 const AddService = () => {
   const handleAddService = (event) => {

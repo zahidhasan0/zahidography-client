@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 const MyReview = () => {
   const [userReviews, setUserReviews] = useState([]);
   const { user, logOut } = useContext(AuthProvider);
+  console.log(user.uid);
 
   //load reviews by uid.
 
@@ -18,11 +19,15 @@ const MyReview = () => {
         email: `${user?.email}`,
       },
     })
+      // headers: {
+      //   authorization: `Bearer ${localStorage.getItem("token")}`,
+      //   email: `${user?.email}`,
+      // },
       .then((res) => {
         if (res.status === 401 || res.status === 403) {
           return logOut();
         }
-        res.json();
+        return res.json();
       })
       .then((data) => {
         console.log(data);
@@ -64,7 +69,7 @@ const MyReview = () => {
         Your Reviews
       </h2>
       <div>
-        {userReviews?.length === 0 ? (
+        {userReviews.length === 0 ? (
           <div className="w-3/5 mx-auto h-80 my-auto flex justify-center items-center">
             <h3 className="text-3xl  text-center text-yellow-500 font-bold">
               No reviews were added
@@ -72,7 +77,7 @@ const MyReview = () => {
           </div>
         ) : (
           <>
-            {userReviews?.map((singleReview) => (
+            {userReviews.map((singleReview) => (
               <ReviewCard
                 key={singleReview._id}
                 singleReview={singleReview}
