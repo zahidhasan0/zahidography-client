@@ -26,6 +26,6 @@ Description:
 
 # There is another page of my reviews . In the the my review card has a photo, title and the review text. besides ther have two icons of edit and delete. if click in the delete icons the review will be deleted. If click in the edit button this will go to a page where user can update his review.
 
-# There is a block section which contains some quesiton and ansers.
+# There is a block section which contains some quesiton and answers.
 
 # The project is responsive and authenticadet.

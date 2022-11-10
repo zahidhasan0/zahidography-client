@@ -74,7 +74,7 @@ const Header = () => {
             {menu}
           </ul>
         </div>
-        <Link className="btn btn-ghost normal-case font-bold  text-2xl">
+        <Link to="/" className="btn btn-ghost normal-case font-bold  text-2xl">
           ZahidographY
         </Link>
       </div>

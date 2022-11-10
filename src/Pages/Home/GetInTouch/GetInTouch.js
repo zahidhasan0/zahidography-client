@@ -9,7 +9,7 @@ const GetInTouch = () => {
         Get In Touch
       </h5>
 
-      <div className="justify-center items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+      <div className="justify-center items-center space-y-4  sm:space-y-0 sm:space-x-4">
         <Link className="text-6xl text-blue-700 bg-gray-200 p-8 hover:bg-gray-300 mr-8">
           <FaFacebookMessenger />
         </Link>

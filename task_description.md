@@ -80,8 +80,8 @@ However, your website **cannot** be related to your **previous assignments** or 
 3. If needed, you can mix a CSS framework with a component library
 4. You may use `react hook form`, basic html form or any library for authentication
 5. Store JWT token in http only cookie (alternatively, feel free to store it in the Local storage for this assignment)
-<!-- 6. Try to host your site on Firebase (Netlify host will need extra configuration) -->
-6. Try to host the server on Vercel
+6. Try to host your site on Firebase (Netlify host will need extra configuration)
+7. Try to host the server on Vercel
 
 ### What to submit
 

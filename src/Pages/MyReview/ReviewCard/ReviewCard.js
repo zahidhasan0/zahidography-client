@@ -13,7 +13,7 @@ const ReviewCard = ({ singleReview, handleDelete }) => {
   };
 
   return (
-    <div className="grid mb-5 rounded-lg border border-gray-200 shadow-sm dark:border-gray-700 md:mb-6 w-3/5 mx-auto">
+    <div className="grid mb-5 rounded-lg border border-gray-200 shadow-sm dark:border-gray-700 md:mb-6 md:w-3/5 mx-auto">
       <figure className="flex flex-col  p-8  bg-white rounded-t-lg border-b border-gray-200 md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
         <div className="flex justify-between">
           <figcaption className="flex mb-4 items-center space-x-3">
