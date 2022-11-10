@@ -14,13 +14,16 @@ const UpdatedPage = () => {
     const text = event.target.text.value;
     console.log(text);
 
-    fetch(`http://localhost:5000/reviews/${updatableReview?._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({ text }),
-    })
+    fetch(
+      `https://b6a11-service-review-server-side-zahidhasan0.vercel.app/reviews/${updatableReview?._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({ text }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         navigate("/myreview");

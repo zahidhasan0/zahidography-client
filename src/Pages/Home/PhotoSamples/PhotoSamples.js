@@ -6,7 +6,9 @@ const PhotoSamples = () => {
 
   //loading images from the database
   useEffect(() => {
-    fetch("http://localhost:5000/photos")
+    fetch(
+      "https://b6a11-service-review-server-side-zahidhasan0.vercel.app/photos"
+    )
       .then((res) => res.json())
       .then((data) => {
         setPhotos(data);

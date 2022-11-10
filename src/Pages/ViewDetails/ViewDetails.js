@@ -17,7 +17,9 @@ const ViewDetails = () => {
   //   const { email, uid, photoURL, displayName } = user;
   const { _id, name, img, price, ratings, description } = serviceDetails;
   useEffect(() => {
-    fetch("http://localhost:5000/reviews/")
+    fetch(
+      "https://b6a11-service-review-server-side-zahidhasan0.vercel.app/reviews/"
+    )
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -41,13 +43,16 @@ const ViewDetails = () => {
       serviceImg: img,
       reviewDate: date,
     };
-    fetch(`http://localhost:5000/reviews`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(reviewDetails),
-    })
+    fetch(
+      `https://b6a11-service-review-server-side-zahidhasan0.vercel.app/reviews`,
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(reviewDetails),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -57,7 +62,9 @@ const ViewDetails = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviewsByID/${_id}`)
+    fetch(
+      `https://b6a11-service-review-server-side-zahidhasan0.vercel.app/reviewsByID/${_id}`
+    )
       .then((res) => res.json())
       .then((data) => setReviewByService(data));
   }, [_id]);

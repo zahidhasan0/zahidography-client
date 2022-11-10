@@ -13,12 +13,15 @@ const MyReview = () => {
   //load reviews by uid.
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviewsByUID/${user.uid}`, {
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("token")}`,
-        email: `${user?.email}`,
-      },
-    })
+    fetch(
+      `https://b6a11-service-review-server-side-zahidhasan0.vercel.app/reviewsByUID/${user.uid}`,
+      {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("token")}`,
+          email: `${user?.email}`,
+        },
+      }
+    )
       // headers: {
       //   authorization: `Bearer ${localStorage.getItem("token")}`,
       //   email: `${user?.email}`,
@@ -42,9 +45,12 @@ const MyReview = () => {
       return;
     }
 
-    fetch(`http://localhost:5000/reviews/${id}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://b6a11-service-review-server-side-zahidhasan0.vercel.app/reviews/${id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

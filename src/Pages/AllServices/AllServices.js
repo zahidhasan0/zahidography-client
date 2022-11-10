@@ -11,7 +11,9 @@ const AllServices = () => {
   const [limit, setLimit] = useState(6);
   const pages = Math.ceil(count / limit);
   useEffect(() => {
-    fetch(`http://localhost:5000/services?page=${page}&size=${limit}`)
+    fetch(
+      `https://b6a11-service-review-server-side-zahidhasan0.vercel.app/services?page=${page}&size=${limit}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setSpinning(false);
