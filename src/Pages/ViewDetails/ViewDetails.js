@@ -4,6 +4,8 @@ import { AuthProvider } from "../../Context/AuthContext";
 import ReviewDetails from "./ReviewDetails/ReviewDetails";
 import { Helmet } from "react-helmet";
 
+const date = new Date();
+
 const ViewDetails = () => {
   const [reviews, setReviews] = useState([]);
   const [reviewsByService, setReviewByService] = useState([]);
@@ -26,6 +28,7 @@ const ViewDetails = () => {
   const handleReviewBox = (event) => {
     event.preventDefault();
     const text = event.target.text.value;
+
     event.target.reset();
     const reviewDetails = {
       serviceName: name,
@@ -36,6 +39,7 @@ const ViewDetails = () => {
       userImg: user.photoURL,
       revirewText: text,
       serviceImg: img,
+      reviewDate: date,
     };
     fetch(`http://localhost:5000/reviews`, {
       method: "POST",

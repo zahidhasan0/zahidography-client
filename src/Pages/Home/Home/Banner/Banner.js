@@ -9,15 +9,23 @@ const Banner = () => {
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content text-center text-neutral-content">
+      <div className="hero-content  text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+          <h1 className="mb-5 text-5xl font-bold">
+            <span>Hello!</span>
+            <br /> This is Zahid Hasan <br />
+            <span className=" text-right text-2xl font-semibold">
+              A Pofessional Photographer.
+            </span>
+          </h1>
+
           <p className="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            “Photography is a way of feeling, of touching, of loving. What you
+            have caught on film is captured forever… It remembers little things,
+            long after you have forgotten everything.”
           </p>
-          <button className="btn btn-primary">Get Started</button>
+
+          <button className="btn btn-primary">Hire Me</button>
         </div>
       </div>
     </div>

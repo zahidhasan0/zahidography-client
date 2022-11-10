@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
 import ServiceCard from "../Home/Services/ServiceCard/ServiceCard";
 import { Helmet } from "react-helmet";
+import { Button } from "flowbite-react";
 
 const AllServices = () => {
   const [allServices, setAllServices] = useState([]);
   const [spinning, setSpinning] = useState(true);
+  const [count, setCount] = useState(0);
+  const [page, setPage] = useState(0);
+  const [limit, setLimit] = useState(6);
+  const pages = Math.ceil(count / limit);
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch(`http://localhost:5000/services?page=${page}&size=${limit}`)
       .then((res) => res.json())
       .then((data) => {
         setSpinning(false);
-        setAllServices(data);
+        setAllServices(data.services);
+        setCount(data.count);
       });
-  }, []);
+  }, [page, limit]);
   return (
     <div className="my-5 container mx-auto">
       {/* helmet for route title  */}
@@ -29,10 +35,10 @@ const AllServices = () => {
 
       {/* adding spinner before data load  */}
       {spinning && (
-        <div class="text-center">
+        <div className="text-center">
           <div role="status">
             <svg
-              class="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+              className="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -46,10 +52,35 @@ const AllServices = () => {
                 fill="currentFill"
               />
             </svg>
-            <span class="sr-only">Loading...</span>
+            <span className="sr-only">Loading...</span>
           </div>
         </div>
       )}
+
+      <div className="text-center mt-10">
+        <p> Page : {page + 1} </p>
+        {[...Array(pages).keys()].map((number) => (
+          <button
+            className="mr-7 mt-3 p-3 bg-black text-white"
+            onClick={() => setPage(number)}
+            key={number}
+          >
+            {number + 1}
+          </button>
+        ))}
+
+        <select
+          onChange={(event) => setLimit(event.target.value)}
+          name=""
+          id=""
+        >
+          <option value="3">3</option>
+          <option value="6" selected>
+            6
+          </option>
+          <option value="10">10</option>
+        </select>
+      </div>
     </div>
   );
 };
