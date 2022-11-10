@@ -19,11 +19,14 @@ However, your website **cannot** be related to your **previous assignments** or 
 <!-- 2. There will be a " **see all**" button/icon under the 3 services. When clicking the button/icon, take the user to the _/services_ route and show all the services on that page. -->
 
 3. Add two extra sections on the home page. Make sure it is unique and relevant to your website.
+
+
+
+
    <!-- 4. The services of the home page and the services of the services page will have the name of the service, image, rating(optional), price, a short description(maximum 100 characters), and a view details button with each service card. -->
    <!-- 5. When clicking on the image of the service, the picture will be viewed on full screen. Explore the package [react-photo-view](https://react-photo-view.vercel.app/en-US) for that.
       <!-- 4. On clicking the view details button, the user will be taken to the service details page: _/services/:id_ route  -->
    <!-- 4. The service details route will have two sections. -->
-
       <!-- 7.1. **Service section:-** show all the details of that Service with full description. -->
 
       <!-- 7.2. **Review section:-** there will be a review section where a user can see others' reviews of that service. A review should contain a text, name, and image of the reviewer, rating(optional). The user can also **add his/her own review** for that service. But he needs to log in first. If the user is not logged in(use conditional rendering), show a text like: Please login to add a review. After clicking the login button/link, take him to the login page. Otherwise, show a form with a text area and a button to add his review(rating is optional). Please store the user info (email, etc.) and service info (service id, etc.) with each review to display the reviews correctly with the relevant service. -->
@@ -47,13 +50,13 @@ However, your website **cannot** be related to your **previous assignments** or 
 
 1. Your Readme file for the client-side repo should have details about your project's features and functionalities in bullet points(at least five bullet points) and your live link. Adding a meaningful readme file for the server-side repo is optional.
 2. At least 15 meaningful GitHub commits for the client-side and 8 meaningful commits for the server-side repository.
-3. Your code should be clean and organized. Comments should be added where necessary
+<!-- 3. Your code should be clean and organized. Comments should be added where necessary -->
 
 <!-- 4. The **title of the page** will change with the page you visit. It should not be the same for every route -->
 <!-- 5. Add a meaningful favicon -->
 <!-- 6. Add a **spinner** on the services page, and the login and register page. If data is loading, a spinner will be displayed. -->
 
-6. use the **Environment** Environment variable on both the client (firebase config) and server-side (mongodb credentials, Access token secret). Use .gitignore file on the server side.
+<!-- 6. use the **Environment** Environment variable on both the client (firebase config) and server-side (mongodb credentials, Access token secret). Use .gitignore file on the server side. -->
    <!-- 7. Implement the basic version of the **JWT** **token** for email/password-based authentication. Upon login, you will create a jwt token and store it on the client side, and for the "My reviews" page, you will send the token and verify the user. Implementing 401 and 403 is optional. -->
    <!-- 9. In the "My reviews" page, clicking the **edit review** button/icon shows that review in a modal/in a new route and lets the user update it. -->
 7. **Simple challenge** In the service details page, **sort the reviews in a descending order** by inserting time(you have to keep the inserting time when you add a review, you can do it with the Date object, or you can explore MongoDB documentation). You will have to implement this code on the server side.

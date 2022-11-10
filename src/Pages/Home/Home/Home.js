@@ -3,6 +3,7 @@ import PhotoSamples from "../PhotoSamples/PhotoSamples";
 import Services from "../Services/Services";
 import Banner from "./Banner/Banner";
 import { Helmet } from "react-helmet";
+import GetInTouch from "../GetInTouch/GetInTouch";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Banner />
       <Services />
       <PhotoSamples />
+      <GetInTouch />
     </div>
   );
 };
